@@ -37,4 +37,32 @@ Python3, numpy, opencv, dronekit
    pip install numpy
    ```
 
-   
+6. To establish the connection between the mission planner and the dronekit-sitl interface, we need to download the mavproxy api using pip:
+
+```
+pip install mavproxy pymavlink --user --upgrade
+```
+## Run Project
+
+run the following command to run the code:
+
+1. Run dronekit-sitl
+
+   ```
+   dronekit-sitl copter
+   ```
+
+2. Run mavproxy 
+
+   ```
+   link add 127.0.0.1:14550
+   ```
+
+3. Run mission planner
+
+   Open the mission planner application, press the connect button, and then enter the port number to connect.
+
+4. Run python project
+
+   By running the python project and running the code by writing the live or video connection in the videoCapture method, the dronekit-sitl connection will be made.
+
